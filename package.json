@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "dependencies": {
     "core-js": "^3.9.1",
@@ -23,6 +23,10 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxt/types": "^2.15.6",
     "@nuxt/typescript-build": "^2.1.0",
-    "nuxt-fontawesome": "^0.4.0"
+    "@nuxtjs/vuetify": "^1.11.3",
+    "nuxt-fontawesome": "^0.4.0",
+    "sass": "~1.32",
+    "vue-cli-plugin-vuetify": "~2.4.1",
+    "vuetify-loader": "^1.7.0"
   }
 }

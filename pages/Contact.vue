@@ -22,6 +22,7 @@
         ><font-awesome-icon :icon="['fab', 'github']" class="github" />
         Github</a
       >
+      <h3 class="tell-me">ご不明な点、意見等ございましたら、いずれかのリンクからご連絡ください。</h3>
     </div>
   </div>
 </template>
@@ -45,15 +46,20 @@ export default {
 .sns {
   font-size: 1rem;
   padding-bottom: 2rem;
+  color: #f89306;
+  
 }
 .twitter {
   color: rgb(97, 97, 255);
 
 }
 .instagram {
-  color: #f89304;
+  color: #f85d04;
 }
 .github {
   color: aqua;
+}
+.tell-me {
+  padding: 4rem 0;
 }
 </style>

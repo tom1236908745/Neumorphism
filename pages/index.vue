@@ -14,49 +14,17 @@
       <br />
       <h3>birthday: 2001/03/08</h3>
     </section>
-    <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      
-      <v-card>
-        <GmapMap
-          map-type-id="roadmap"
-          :center="maplocation"
-          :zoom="zoom"
-          :style="styleMap"
-          :options="mapOptions"
-        >
-        </GmapMap>
-      </v-card>
-    </v-col>
-  </v-row>
+    
+    
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      maplocation: { lng: 0, lat: 0 },
-      zoom: 4,
-      styleMap: {
-        width: '100%',
-        height: '400px',
-      },
-      mapOptions: {
-        streetViewControl: false,
-        styles: [],
-      },
-    }
-  },
+  
 };
 </script>
 <style scoped>
 .home {
-  /*  TODO: 背景画像
-  background-size: cover;
-  background-image: url("../assets/images/body/background/Home/wood2.jpg");
-  background-color: rgba(251, 227, 189, 0.15);
-  background-blend-mode: lighten;
-  background-size: auto 100%; */
   background: -moz-linear-gradient(top, #ffc778, #fff);
   background: -webkit-linear-gradient(top, #ffc778, #fff);
   background: linear-gradient(to bottom, #ffc778, #fff);

@@ -26,8 +26,7 @@ export default {
   plugins: [
     '~/plugins/element.ts', 
     '~/plugins/vue-scrollto.ts',
-    '@/plugins/vuetify',
-    {src:"~plugins/vue2-google-maps.js"}
+    '~plugins/vue2-google-maps.ts'
   ],
   
 
@@ -36,7 +35,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,23 +56,20 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, ctx) {
-
-     //add for vue2-google-maps
-     if (!ctx.isClient) {
-       // This instructs Webpack to include `vue2-google-maps`'s Vue files
-       // for server-side rendering
-       config.externals.splice(0, 0, function (context, request, callback) {
-         if (/^vue2-google-maps($|\/)/.test(request)) {
-           callback(null, false)
-         } else {
-           callback()
-         }
-       })
+      config.externals = config.externals || [];
+      if (!ctx.isClient) {
+        config.externals.splice(0, 0, function(context, request, callback) {
+          if (/^vue2-google-maps($|\/)/.test(request)) {
+            callback(null, false);
+          } else {
+            callback();
+          }
+        });
       }
-     }
+    },
+    vendor: ['vue2-google-maps'],
   },
   generate: { 
     dir: 'public' 
   },
-  vendor:["vue2-google-maps"]
 }

@@ -25,15 +25,17 @@
         <h1 class="heading">Experience</h1>
         <div class="experience-contents">
           <div class="experience-items">
-            <img src="~/assets/img/about/abroad.png" alt="studyAbroad">
+            <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+            
             <p>Study abroad</p>
           </div>
           <div class="experience-items">
-            <img src="~/assets/img/about/abroad.png" alt="studyAbroad">
+            <a href="#" v-scroll-to="'#skill'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+            
             <p>Skills</p>
           </div>
           <div class="experience-items">
-            <img src="~/assets/img/about/abroad.png" alt="studyAbroad">
+            <a href="#" v-scroll-to="'#club'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
             <p>Club</p>
           </div>
         </div>
@@ -50,15 +52,32 @@
             <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
             <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
           </div>
+          <h2 class="titleGM">留学先のアデレード↓</h2>
+          <GmapMap
+            :center="{ lat:-34.9284, lng:138.6007 }"
+            :zoom="4"
+            :options="mapOptions"
+            map-type-id="terrain"
+            style="width: 500px; height: 300px;"
+          >
+            <GmapMarker
+        
+              :position="marker.position"
+              :clickable="true"
+              :draggable="true"
+              @click="center=marker.position"
+            />
+          </GmapMap>
+          
           <h1 class="heading" id="skill">Skills</h1>
           <div class="context-item">
             <br>
             <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
             <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
           </div>
-          
+          <h1>↓↓↓</h1>
           <el-button @click="visible = true">使える言語</el-button>
-
+          
           <el-dialog
             title="使える言語"
             :visible.sync="visible"
@@ -96,6 +115,13 @@ export default {
   data: function() {
     return { 
       visible: false,
+
+      //google map用
+      marker: {position: { lat:-34.9284, lng:138.6007 }},
+      mapOptions: {
+
+        streetViewControl: false,
+      },
     }
   },
 };
@@ -116,7 +142,6 @@ export default {
   list-style-type: none;
 }
 .side-content{
-  
   padding-top: 1rem;
   width: 10%;
   height:50%;
@@ -139,9 +164,7 @@ export default {
 .heading {
   padding: 3rem 0;
 }
-.context-text {
-  margin: 3rem;
-}
+
 .dialog-title {
   text-align: center;
   font-size: 1rem;
@@ -171,9 +194,15 @@ export default {
 .experience-contents {
   display: flex;
 }
+.titleGM {
+  padding-bottom: 2rem;
+}
 .context-wrapper {
   padding: 3rem 0;
   border-bottom: 1px solid orange;
+}
+.context-text {
+  margin: 3rem;
 }
 .context-item {
   display: flex;

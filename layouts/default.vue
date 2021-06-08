@@ -2,8 +2,8 @@
   <div>
     <myHeader />
     <scrollUp />
-    <side-content />
     <Nuxt />
+    
   </div>
 </template>
 
