@@ -25,7 +25,7 @@ export default {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  margin: 5rem;
+  margin: 7rem;
   animation-name: upDown;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;

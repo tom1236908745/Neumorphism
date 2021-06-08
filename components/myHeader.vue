@@ -63,7 +63,6 @@ export default {
 .myHeader {
   padding: 30px 4% 20px;
   top: 0;
-  width: 100%;
   background-color: #fbd241;
   display: flex;
   align-items: center;
@@ -85,7 +84,7 @@ nav {
 .pages {
   
   border: none;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 2rem;
   font-size: 30px;
   border-radius: 14px;
   background: #fbd241;
@@ -93,7 +92,7 @@ nav {
 }
 .pages:hover {
  
-  border-radius: 50px;
+  border-radius: 14px;
   background: linear-gradient(145deg, #e2bd3b, #ffe146);
   box-shadow:  20px 20px 60px #d5b337, -20px -20px 60px #fff24b;
 }

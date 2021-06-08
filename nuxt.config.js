@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxtproject',
@@ -23,7 +24,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   
   plugins: [
-    '~/plugins/element.js', 
+    '~/plugins/element.ts', 
+    '~/plugins/vue-scrollto.ts',
   ],
   
 
@@ -51,5 +53,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  generate: { 
+    dir: 'public' 
+  } 
 }

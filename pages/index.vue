@@ -1,13 +1,18 @@
 <template>
   <div class="home">
     <section class="context">
-      <span>自己紹介</span>
+      <span class="temp">// 製作中です。。。　色々アドバイスいただけると嬉しいです！</span>
+      <br>
+      <span class="temp">レイアウトも内容もまだまだです(6/8)</span>
+      <br>
+      <span class="temp">(まだ、レスポンシブ対応していません(ノートパソコン推奨(マスト)))</span>
+      <br />
+      <br />
+      <span class="intro">自己紹介</span>
       <br />
       <h3>name: 中山 智輝 / Tomoki Nakayama</h3>
       <br />
       <h3>birthday: 2001/03/08</h3>
-      
-      <!-- <vue-typer text='Hello World! I was registered locally!'></vue-typer> -->
     </section>
     
   </div>
@@ -28,6 +33,10 @@ export default {
   background: -webkit-linear-gradient(top, #ffc778, #fff);
   background: linear-gradient(to bottom, #ffc778, #fff);
   height: 100vh;
+  width: auto;
+}
+.temp {
+  color:tomato;
 }
 .typer {
   font-size: 2rem;
