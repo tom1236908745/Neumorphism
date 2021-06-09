@@ -2,8 +2,7 @@
   <div class="home">
     <section class="common-layout">
       <div class="card">
-        <span class="temp">// 製作中です。。。　色々アドバイスいただけると嬉しいです！<br>
-          レイアウトも内容もまだまだです(6/8)<br>
+        <span class="temp">// 製作中です。。。　色々アドバイスいただけると嬉しいです！<br><br>
           (まだ、レスポンシブ対応していません(ノートパソコン推奨(マスト)))
         </span>
         <div class="home-title">
@@ -23,7 +22,7 @@ export default {
 <style scoped>
 
 .temp {
-  color:tomato;
+  color: rgb(181, 184, 211);
 }
 .typer {
   font-size: 2rem;

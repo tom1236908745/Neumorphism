@@ -62,12 +62,12 @@ export default {
   margin: 0 0 0 auto;
 }
 .pages {
-  color: rgb(191, 194, 223);
   padding: 0 1rem;
   border: none;
   margin: 0 0 0 2rem;
   font-size: 30px;
   border-radius: 14px;
+  color: rgb(191, 194, 223);
   background: #fff7aa;
   box-shadow: -2px -2px 5px rgba(255, 255, 170, 1), 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -80,7 +80,7 @@ export default {
   position: relative;
   top:0.1rem;
   left: 0.2rem;
-  color: rgb(181, 184, 211)
+  color: rgb(181, 184, 211);
 }
 
 </style>

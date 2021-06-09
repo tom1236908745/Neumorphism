@@ -63,13 +63,13 @@ footer{
     border: none;
     font-size: 1rem;
     border-radius: 1rem;
-    color: #d4c17c;
+    color: rgb(191, 194, 223);
     background: #FFF7AA;
     box-shadow: -0.1rem -0.1rem 0.2rem rgba(255, 255, 170, 1), 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 .footer-pages:active {
     
-    color: #d4c17c;
+    color: rgb(181, 184, 211);
     background: #FFF7AA;
     box-shadow:  -0.5px -0.5px 0.5px rgba(0, 0, 0, 0.1)inset, 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.1)inset;
 }
