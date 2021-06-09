@@ -9,7 +9,7 @@
 
 <style>
 html {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Oswald', Courier, monospace;
   word-spacing: 5px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -18,6 +18,7 @@ html {
   box-sizing: border-box;
   color: #4D5156;
   background-color: #fcf9f3;
+  text-shadow: 0.3rem 0.3rem 2rem #808080;
 }
 
 *,

@@ -62,7 +62,7 @@ export default {
   margin: 0 0 0 auto;
 }
 .pages {
-  color: #d5b337;
+  color: rgb(191, 194, 223);
   padding: 0 1rem;
   border: none;
   margin: 0 0 0 2rem;
@@ -80,7 +80,7 @@ export default {
   position: relative;
   top:0.1rem;
   left: 0.2rem;
-  color: #d4c17c
+  color: rgb(181, 184, 211)
 }
 
 </style>

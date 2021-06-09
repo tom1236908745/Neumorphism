@@ -27,8 +27,7 @@ export default {
   
 }
 .scroll-button {
-  background-color: #eb9900ca;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  
   border-radius: 50%;
   line-height: 100px;
   width: 100px;

@@ -8,7 +8,7 @@
     </ul> -->
     <div class="common-layout">
       <div class="card">
-        <h1 class="intro">ポートフォリオの紹介</h1>
+        <h1 class="title">ポートフォリオの紹介</h1>
         <br>
         <p class="title">~Technologies~</p>
         <a href="https://ja.nuxtjs.org/" class="link">Nuxt.js</a>
@@ -23,10 +23,9 @@
           <nuxt-link to="/Contact" class="link"> Contact Page</nuxt-link>
         </div>
       </div>
-      <p style="border-bottom: 1px solid orange;"></p>
-      
+      <p style="border-bottom: 1px solid rgb(191, 194, 223);"></p>
+      <div class="card">
         <p class="experience-title">Experience</p>
-        <div class="card">
           <div class="experience-contents">
             <div class="experience-items">
               <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
@@ -44,73 +43,71 @@
             </div>
           </div>
         </div>
-      <p style="border-bottom: 1px solid orange;"></p>
+      <p style="border-bottom: 1px solid rgb(191, 194, 223);"></p>
 
       <section class="context-wrapper">
-        <div class="context-content">
-          <div class="card">
-            <p class="title">~Episode~</p>
-            <p class="heading" id="studyAbroad">Study Abroad</p>
-            
-            <div class="context-item">
-              <br>
-              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-              <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
-            </div>
-            <h2 class="titleGM">留学先のアデレード↓</h2>
-            <GmapMap
-              :center="{ lat:-34.9284, lng:138.6007 }"
-              :zoom="4"
-              :options="mapOptions"
-              map-type-id="terrain"
-              style="width: 500px; height: 300px;"
-            >
-              <GmapMarker
+        <p class="context-main-title">~Episode~</p>
+        <div class="card">
+          <p class="context-title" id="studyAbroad">Study Abroad</p>
           
-                :position="marker.position"
-                :clickable="true"
-                :draggable="true"
-                @click="center=marker.position"
-              />
-            </GmapMap>
+          <div class="context-item">
+            <br>
+            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
           </div>
-          <div class="card">
-            <p class="heading" id="skill">Skills</p>
-            <div class="context-item">
-              <br>
-              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-              <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
-            </div>
-            <p>↓↓↓</p>
-            <el-button @click="visible = true">使える言語</el-button>
-            
-            <el-dialog
-              title="使える言語"
-              :visible.sync="visible"
-              width="30%"
-              center>
-              <div>
-                <p class="dialog-title">使える言語(期間/使用用途)</p>
-                <ul class="dialog-text">
-                  <li>Js(Vue)(半年/Web系会社のインターン,開発)</li>
-                  <li>html, css(1年/Web系会社インターン,開発)</li>
-                  <li>C言語(1年/講義)</li>
-                  <li>Java(1年/講義)</li>
-                  <li>Python</li>
-                </ul>
-              </div>
-              <span slot="footer" class="dialog-footer">
-                <el-button @click="visible = false">Cancel</el-button>
-                <el-button @click="visible = false" class="dialog-button">Confirm</el-button>
-              </span>
-            </el-dialog>
+          <h2 class="titleGM">留学先のアデレード↓</h2>
+          <GmapMap
+            :center="{ lat:-34.9284, lng:138.6007 }"
+            :zoom="4"
+            :options="mapOptions"
+            map-type-id="terrain"
+            style="width: 500px; height: 300px;"
+          >
+            <GmapMarker
+        
+              :position="marker.position"
+              :clickable="true"
+              :draggable="true"
+              @click="center=marker.position"
+            />
+          </GmapMap>
+        </div>
+        <div class="card">
+          <p class="context-title" id="skill">Skills</p>
+          <div class="context-item">
+            <br>
+            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
           </div>
-          <div class="card">
-            <p class="heading" id="club">Club</p>
-            <div class="context-item">
-              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-              <p class="context-text">サークル活動では小規模ながら、アウトドアサークルというサークルの部長をしています。元々、部員の数が少なく自分が部長になった時は活動メンバーが5人いるかいないかの程度でした。せっかく、部長になったから何かサークルを成長させたいと思い、新たにSNS(Instagram)のアカウントの開設やその他SNSを活用し、新メンバー勧誘のために他大学の生徒の勧誘や積極的に部員に声をかけるなどをし前年度の3倍以上の部員を勧誘することができました。</p>
+          <p>↓↓↓</p>
+          <el-button @click="visible = true">使える言語</el-button>
+          
+          <el-dialog
+            title="使える言語"
+            :visible.sync="visible"
+            width="30%"
+            center>
+            <div>
+              <p class="dialog-title">使える言語(期間/使用用途)</p>
+              <ul class="dialog-text">
+                <li>Js(Vue)(半年/Web系会社のインターン,開発)</li>
+                <li>html, css(1年/Web系会社インターン,開発)</li>
+                <li>C言語(1年/講義)</li>
+                <li>Java(1年/講義)</li>
+                <li>Python</li>
+              </ul>
             </div>
+            <span slot="footer" class="dialog-footer">
+              <el-button @click="visible = false">Cancel</el-button>
+              <el-button @click="visible = false" class="dialog-button">Confirm</el-button>
+            </span>
+          </el-dialog>
+        </div>
+        <div class="card">
+          <p class="context-title" id="club">Club</p>
+          <div class="context-item">
+            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <p class="context-text">サークル活動では小規模ながら、アウトドアサークルというサークルの部長をしています。元々、部員の数が少なく自分が部長になった時は活動メンバーが5人いるかいないかの程度でした。せっかく、部長になったから何かサークルを成長させたいと思い、新たにSNS(Instagram)のアカウントの開設やその他SNSを活用し、新メンバー勧誘のために他大学の生徒の勧誘や積極的に部員に声をかけるなどをし前年度の3倍以上の部員を勧誘することができました。</p>
           </div>
         </div>
       </section>
@@ -150,7 +147,8 @@ export default {
 .title {
   padding: 4rem 0;
   font-size: 2rem;
-  color: rgb(129, 129, 81);
+  color: #4D5156;
+  
 }
 .links {
   padding-bottom: 3rem;
@@ -161,15 +159,10 @@ export default {
   color: rgb(191, 194, 223);
   text-decoration:none;
   font-size: 1.5rem;
-  text-shadow: 0.3rem 0.3rem 1rem #808080;
 }
 .link span{
   margin: 0 1rem;
   color:#4D5156;
-  text-shadow: 0.3rem 0.3rem 1rem #808080;
-}
-.heading {
-  padding: 3rem 0;
 }
 
 .dialog-title {
@@ -209,6 +202,15 @@ export default {
 }
 .titleGM {
   padding-bottom: 2rem;
+}
+.context-main-title {
+  margin-top: 6rem;
+  font-size: 2rem;
+  
+}
+.context-title {
+  margin: 3rem 0 6rem;
+  font-size: 2rem;
 }
 .context-text {
   margin: 3rem;
