@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button v-on:click="scrollTop" class="scrollTop">
+  <div class="scroll-top">
+    <button v-on:click="scrollTop" class="scroll-button">
       <span class="text">Top</span>
     </button>
   </div>
@@ -21,19 +21,13 @@ export default {
 </script>
 
 <style>
-.scrollTop {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  margin: 7rem;
-  animation-name: upDown;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 1.5s;
-  color: #fff;
+.scroll-top {
+  text-align: right;
+  margin: 0 5rem 5rem 0;
+  
+}
+.scroll-button {
   background-color: #eb9900ca;
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   line-height: 100px;
@@ -42,22 +36,17 @@ export default {
   padding: 0;
   border: none;  /* 枠線を消す */
   outline: none;
+  background: #fcf9f3;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+              5px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.scrollTop:hover{
-  color: #fff;
-  background: #f5b400a2;
-}
-@keyframes upDown {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(0, 1rem);
-  }
+.scroll-button:active{
+  color: #dddad4;;
+  box-shadow: -4px -4px 5px rgba(0, 0, 0, 0.1)inset,
+              4px 4px 5px rgba(0, 0, 0, 0.1)inset;
 }
 .text {
   font-size: 1.5rem;
-  color: rgba(250, 240, 206, 0.822);
+  color: rgba(255, 233, 162, 0.822);
 }
 </style>

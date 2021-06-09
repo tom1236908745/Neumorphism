@@ -1,28 +1,31 @@
 <template>
   <div class="about">
+    <!-- // 一応
     <ul class="side-content">
-      <li href="#" v-scroll-to="'#studyAbroad'" class="toEpisode">留学のエピソードへ</li>
-      <li href="#" v-scroll-to="'#skill'" class="toEpisode">スキルのエピソードへ</li>
-      <li href="#" v-scroll-to="'#club'" class="toEpisode">サークルのエピソードへ</li>
-    </ul>
-    <div class="page__text">
-      <span class="intro">Pageの紹介</span>
-      <br>
-      <h1 class="title">~Technologies~</h1>
-      <h2>Nuxt.js</h2>
-      <br>
-      <br>
-      <h1 class="title">~Pages~</h1>
-      <div class="links">
-        <nuxt-link to="/" class="link">Home Page</nuxt-link>
-        <br/>
-        <nuxt-link to="/About" class="link">About Page(this page)</nuxt-link>
-        <br/>
-        <nuxt-link to="/Contact" class="link">Contact Page</nuxt-link>
+      <li href="#" v-scroll-to="'#studyAbroad'">留学のエピソードへ</li>
+      <li href="#" v-scroll-to="'#skill'">スキルのエピソードへ</li>
+      <li href="#" v-scroll-to="'#club'">サークルのエピソードへ</li>
+    </ul> -->
+    <div class="common-layout">
+      <div class="card">
+        <h1 class="intro">Pageの紹介</h1>
+        <br>
+        <p class="title">~Technologies~</p>
+        <h2>Nuxt.js</h2>
+        <br>
+        <br>
+        <p class="title">~Pages~</p>
+        <div class="links">
+          <nuxt-link to="/" class="link">Home Page</nuxt-link>
+          <br/>
+          <nuxt-link to="/About" class="link">About Page(this page)</nuxt-link>
+          <br/>
+          <nuxt-link to="/Contact" class="link">Contact Page</nuxt-link>
+        </div>
       </div>
-      
-      <div class="experience">
-        <h1 class="heading">Experience</h1>
+      <p style="border-bottom: 1px solid orange;"></p>
+      <div class="card">
+        <p class="experience-title">Experience</p>
         <div class="experience-contents">
           <div class="experience-items">
             <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
@@ -42,75 +45,78 @@
       </div>
       <p style="border-bottom: 1px solid orange;"></p>
 
-      <div class="context-wrapper">
+      <section class="context-wrapper">
         <div class="context-content">
-          <h1 class="title">~Episode~</h1>
-          <h1 class="heading" id="studyAbroad">Study Abroad</h1>
-          
-          <div class="context-item">
-            <br>
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-            <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
-          </div>
-          <h2 class="titleGM">留学先のアデレード↓</h2>
-          <GmapMap
-            :center="{ lat:-34.9284, lng:138.6007 }"
-            :zoom="4"
-            :options="mapOptions"
-            map-type-id="terrain"
-            style="width: 500px; height: 300px;"
-          >
-            <GmapMarker
-        
-              :position="marker.position"
-              :clickable="true"
-              :draggable="true"
-              @click="center=marker.position"
-            />
-          </GmapMap>
-          
-          <h1 class="heading" id="skill">Skills</h1>
-          <div class="context-item">
-            <br>
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-            <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
-          </div>
-          <h1>↓↓↓</h1>
-          <el-button @click="visible = true">使える言語</el-button>
-          
-          <el-dialog
-            title="使える言語"
-            :visible.sync="visible"
-            width="30%"
-            center>
-            <div>
-              <p class="dialog-title">使える言語(期間/使用用途)</p>
-              <ul class="dialog-text">
-                <li>Js(Vue)(半年/Web系会社のインターン,開発)</li>
-                <li>html, css(1年/Web系会社インターン,開発)</li>
-                <li>C言語(1年/講義)</li>
-                <li>Java(1年/講義)</li>
-                <li>Python</li>
-              </ul>
+          <div class="card">
+            <p class="title">~Episode~</p>
+            <p class="heading" id="studyAbroad">Study Abroad</p>
+            
+            <div class="context-item">
+              <br>
+              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+              <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
             </div>
-            <span slot="footer" class="dialog-footer">
-              <el-button @click="visible = false">Cancel</el-button>
-              <el-button @click="visible = false" class="dialog-button">Confirm</el-button>
-            </span>
-          </el-dialog>
-          <h1 class="heading" id="club">Club</h1>
-          <div class="context-item">
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
-            <p class="context-text">サークル活動では小規模ながら、アウトドアサークルというサークルの部長をしています。元々、部員の数が少なく自分が部長になった時は活動メンバーが5人いるかいないかの程度でした。せっかく、部長になったから何かサークルを成長させたいと思い、新たにSNS(Instagram)のアカウントの開設やその他SNSを活用し、新メンバー勧誘のために他大学の生徒の勧誘や積極的に部員に声をかけるなどをし前年度の3倍以上の部員を勧誘することができました。</p>
+            <h2 class="titleGM">留学先のアデレード↓</h2>
+            <GmapMap
+              :center="{ lat:-34.9284, lng:138.6007 }"
+              :zoom="4"
+              :options="mapOptions"
+              map-type-id="terrain"
+              style="width: 500px; height: 300px;"
+            >
+              <GmapMarker
+          
+                :position="marker.position"
+                :clickable="true"
+                :draggable="true"
+                @click="center=marker.position"
+              />
+            </GmapMap>
+          </div>
+          <div class="card">
+            <p class="heading" id="skill">Skills</p>
+            <div class="context-item">
+              <br>
+              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+              <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
+            </div>
+            <p>↓↓↓</p>
+            <el-button @click="visible = true">使える言語</el-button>
+            
+            <el-dialog
+              title="使える言語"
+              :visible.sync="visible"
+              width="30%"
+              center>
+              <div>
+                <p class="dialog-title">使える言語(期間/使用用途)</p>
+                <ul class="dialog-text">
+                  <li>Js(Vue)(半年/Web系会社のインターン,開発)</li>
+                  <li>html, css(1年/Web系会社インターン,開発)</li>
+                  <li>C言語(1年/講義)</li>
+                  <li>Java(1年/講義)</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+              <span slot="footer" class="dialog-footer">
+                <el-button @click="visible = false">Cancel</el-button>
+                <el-button @click="visible = false" class="dialog-button">Confirm</el-button>
+              </span>
+            </el-dialog>
+          </div>
+          <div class="card">
+            <p class="heading" id="club">Club</p>
+            <div class="context-item">
+              <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+              <p class="context-text">サークル活動では小規模ながら、アウトドアサークルというサークルの部長をしています。元々、部員の数が少なく自分が部長になった時は活動メンバーが5人いるかいないかの程度でした。せっかく、部長になったから何かサークルを成長させたいと思い、新たにSNS(Instagram)のアカウントの開設やその他SNSを活用し、新メンバー勧誘のために他大学の生徒の勧誘や積極的に部員に声をかけるなどをし前年度の3倍以上の部員を勧誘することができました。</p>
+            </div>
           </div>
         </div>
-      </div>
-      
+      </section>
     </div>
   </div>
 </template>
 <script>
-
 export default {
   data: function() {
     return { 
@@ -127,39 +133,26 @@ export default {
 };
 </script>
 <style scoped>
-.about {
-  background: -moz-linear-gradient(top, #ffc778, #fff);
-  background: -webkit-linear-gradient(top, #ffc778, #fff);
-  background: linear-gradient(to bottom, #ffc778, #fff);
-  height: 100vh;
-}
-.toEpisode {
-  color:rgb(248, 121, 3);
-  padding: 1rem 0;
-  font-size: 0.5rem;
-  background: #f3fbff;
-  border: 2px rgb(235, 233, 135) dashed;
-  list-style-type: none;
-}
+
 .side-content{
-  padding-top: 1rem;
-  width: 10%;
+  padding-top: 3rem;
+  width: 15%;
   height:50%;
-  position: fixed;
   flex-direction: column;
+}
+.side-content li {
+  
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  list-style-type: none;
 }
 .title {
   padding: 4rem 0;
   font-size: 2rem;
   color: rgba(251, 96, 7, 0.705);
 }
-.page__text {
-  padding: 20vh;
-  text-align: center;
-}
 .links {
   padding-bottom: 3rem;
-  border-bottom: 1px solid orange;
 }
 .heading {
   padding: 3rem 0;
@@ -173,16 +166,22 @@ export default {
 .dialog-text {
   padding: 1rem;
   text-align: left;
-  border: 2px rgb(235, 212, 135) dashed;
+  border: 2px #e6e4dd dashed;
 }
 .dialog-button {
   color:#ffc778
 }
 .experience {
+  border-radius: 10px;
   margin: 3rem 0;
-  padding-bottom: 3rem;
+  padding: 3rem;
   background-color: #ffc77859;
-  
+  box-shadow: -2px -2px 5px rgb(253, 221, 200),
+              5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.experience-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 .experience-items {
   width: 33.3%;

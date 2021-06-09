@@ -1,21 +1,23 @@
 <template>
   <div>
     <myHeader />
-    <scrollUp />
     <Nuxt />
-    
+    <scrollUp />
+    <myFooter />
   </div>
 </template>
 
 <style>
 html {
- 
+  font-family: 'Courier New', Courier, monospace;
   word-spacing: 5px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #4D5156;
+  background-color: #fcf9f3;
 }
 
 *,
@@ -24,33 +26,16 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.common-layout {
+  padding: 5vh 20vh;
+  text-align: center;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.card {
+  margin: 4rem 0;
+  padding: 3rem;
+  border-radius: 5rem;
+  background: #fcf9f3;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+              5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 </style>
