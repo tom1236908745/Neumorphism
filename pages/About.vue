@@ -8,41 +8,42 @@
     </ul> -->
     <div class="common-layout">
       <div class="card">
-        <h1 class="intro">Pageの紹介</h1>
+        <h1 class="intro">ポートフォリオの紹介</h1>
         <br>
         <p class="title">~Technologies~</p>
-        <h2>Nuxt.js</h2>
+        <a href="https://ja.nuxtjs.org/" class="link">Nuxt.js</a>
         <br>
         <br>
         <p class="title">~Pages~</p>
         <div class="links">
-          <nuxt-link to="/" class="link">Home Page</nuxt-link>
+          <nuxt-link to="/" class="link">Home Page <span>/</span></nuxt-link>
           <br/>
-          <nuxt-link to="/About" class="link">About Page(this page)</nuxt-link>
+          <nuxt-link to="/About" class="link"> About Page(this page)<span>/</span></nuxt-link>
           <br/>
-          <nuxt-link to="/Contact" class="link">Contact Page</nuxt-link>
+          <nuxt-link to="/Contact" class="link"> Contact Page</nuxt-link>
         </div>
       </div>
       <p style="border-bottom: 1px solid orange;"></p>
-      <div class="card">
+      
         <p class="experience-title">Experience</p>
-        <div class="experience-contents">
-          <div class="experience-items">
-            <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
-            
-            <p>Study abroad</p>
-          </div>
-          <div class="experience-items">
-            <a href="#" v-scroll-to="'#skill'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
-            
-            <p>Skills</p>
-          </div>
-          <div class="experience-items">
-            <a href="#" v-scroll-to="'#club'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
-            <p>Club</p>
+        <div class="card">
+          <div class="experience-contents">
+            <div class="experience-items">
+              <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              
+              <p>Study abroad</p>
+            </div>
+            <div class="experience-items">
+              <a href="#" v-scroll-to="'#skill'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              
+              <p>Skills</p>
+            </div>
+            <div class="experience-items">
+              <a href="#" v-scroll-to="'#club'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              <p>Club</p>
+            </div>
           </div>
         </div>
-      </div>
       <p style="border-bottom: 1px solid orange;"></p>
 
       <section class="context-wrapper">
@@ -149,10 +150,23 @@ export default {
 .title {
   padding: 4rem 0;
   font-size: 2rem;
-  color: rgba(251, 96, 7, 0.705);
+  color: rgb(129, 129, 81);
 }
 .links {
   padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.link {
+  color: rgb(191, 194, 223);
+  text-decoration:none;
+  font-size: 1.5rem;
+  text-shadow: 0.3rem 0.3rem 1rem #808080;
+}
+.link span{
+  margin: 0 1rem;
+  color:#4D5156;
+  text-shadow: 0.3rem 0.3rem 1rem #808080;
 }
 .heading {
   padding: 3rem 0;
@@ -195,10 +209,6 @@ export default {
 }
 .titleGM {
   padding-bottom: 2rem;
-}
-.context-wrapper {
-  padding: 3rem 0;
-  border-bottom: 1px solid orange;
 }
 .context-text {
   margin: 3rem;

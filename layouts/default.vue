@@ -31,7 +31,8 @@ html {
   text-align: center;
 }
 .card {
-  margin: 4rem 0;
+
+  margin: 7rem 0;
   padding: 3rem;
   border-radius: 5rem;
   background: #fcf9f3;
