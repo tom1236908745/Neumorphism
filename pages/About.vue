@@ -56,12 +56,13 @@
             <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
           </div>
           <h2 class="titleGM">留学先のアデレード↓</h2>
+          <div>
           <GmapMap
             :center="{ lat:-34.9284, lng:138.6007 }"
             :zoom="4"
             :options="mapOptions"
             map-type-id="terrain"
-            style="width: 500px; height: 300px;"
+            style="height: 300px; width: 500px; margin-right: auto; margin-left: auto;"
           >
             <GmapMarker
         
@@ -71,6 +72,7 @@
               @click="center=marker.position"
             />
           </GmapMap>
+          </div>
         </div>
         <div class="card">
           <p class="context-title" id="skill">Skills</p>

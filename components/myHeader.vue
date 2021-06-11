@@ -9,6 +9,7 @@
                 <nuxt-link
                   to="/"
                 >
+                  <!-- <button @click="toggle" class="nonActive"><span :class="{ nonActive: nonActive, isActive: isActive }"> {{todo.name}} </span></button> 後で実装-->
                   <button class="pages"><span> {{todo.name}} </span></button>
                 </nuxt-link>
             </li>
@@ -34,10 +35,20 @@
 </template>
 <script>
 export default {
+ /*  data: {
+    nonActive: true,
+    isActive: false
+  },　ボタンの部分後で実装 */
   computed: {
     todos (){
       return this.$store.state.todos.list
-    },
+    }
+  },
+  methods: {
+    /* toggle: function(){
+      this.nonActive != this.nonActive
+      this.isActive != this.isActive
+    } ボタンの部分後で実装 */
   },
 };
 </script>
@@ -61,7 +72,7 @@ export default {
 .nav-link {
   margin: 0 0 0 auto;
 }
-.pages {
+/* .nonActive {
   padding: 0 1rem;
   border: none;
   margin: 0 0 0 2rem;
@@ -71,16 +82,43 @@ export default {
   background: #fff7aa;
   box-shadow: -2px -2px 5px rgba(255, 255, 170, 1), 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
+.nonActive:active {
+  border-radius: 14px;
+  background: #FFF7AA;
+  box-shadow:  -2px -2px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
+}
+.nonActive span{
+  color: #4D5156;
+}
+.isActive span {
+  position: relative;
+  top:0.1rem;
+  left: 0.2rem;
+  color: rgb(181, 184, 211);
+} */
+.pages {
+  padding: 0 1rem;
+  border: none;
+  margin: 0 0 0 2rem;
+  font-size: 2rem;
+  border-radius: 14px;
+  color: rgb(191, 194, 223);
+  background: #fff7aa;
+  box-shadow: -2px -2px 5px rgba(255, 255, 170, 1), 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
 .pages:active {
   border-radius: 14px;
   background: #FFF7AA;
-  box-shadow:  -5px -5px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
+  box-shadow:  -2px -2px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
 }
-.pages span:active {
+
+.pages span:active{
   position: relative;
   top:0.1rem;
   left: 0.2rem;
   color: rgb(181, 184, 211);
 }
-
+@media screen and (max-width: 360px) { 
+  
+}
 </style>

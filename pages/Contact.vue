@@ -19,7 +19,7 @@
           >
         </button>
         <button class="sns-button">
-          <a href="https://github.com/tom123908745" class="sns"
+          <a href="https://github.com/tom1236908745" class="sns"
             ><font-awesome-icon :icon="['fab', 'github']" class="github" />
             Github</a
           >
