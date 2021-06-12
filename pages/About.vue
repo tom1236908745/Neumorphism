@@ -118,6 +118,7 @@
 </template>
 <script>
 export default {
+  transition: 'home',
   data: function() {
     return { 
       visible: false,
