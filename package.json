@@ -9,6 +9,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "core-js": "^3.9.1",
     "element-ui": "^2.15.2",
     "nuxt": "^2.15.3",
@@ -24,8 +25,10 @@
     "@nuxt/types": "^2.15.6",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.11.3",
+    "node-sass": "^6.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "sass": "~1.32",
+    "sass-loader": "^10.1.1",
     "vue-cli-plugin-vuetify": "~2.4.1",
     "vuetify-loader": "^1.7.0"
   }

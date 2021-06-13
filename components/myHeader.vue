@@ -161,7 +161,6 @@ export default {
 }
 .pages:active {
   border-radius: 14px;
-  background: #FFF7AA;
   box-shadow:  -2px -2px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
 }
 
@@ -174,7 +173,6 @@ export default {
 
 .pages-left:active {
   border-radius: 14px;
-  background: #FFF7AA;
   box-shadow:  -2px -2px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
 }
 .page-left span:active {

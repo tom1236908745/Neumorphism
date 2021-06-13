@@ -28,17 +28,17 @@
         <p class="experience-title">Experience</p>
           <div class="experience-contents">
             <div class="experience-items">
-              <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              <a href="#" v-scroll-to="'#studyAbroad'"><img src="~/assets/img/about/abroad1.PNG" alt="studyAbroad1"></a>
               
               <p>Study abroad</p>
             </div>
             <div class="experience-items">
-              <a href="#" v-scroll-to="'#skill'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              <a href="#" v-scroll-to="'#skill'"><img src="~/assets/img/about/skill1.PNG" alt="skill1"></a>
               
               <p>Skills</p>
             </div>
             <div class="experience-items">
-              <a href="#" v-scroll-to="'#club'"><img src="~/assets/img/about/abroad.png" alt="studyAbroad"></a>
+              <a href="#" v-scroll-to="'#club'"><img src="~/assets/img/about/club1.PNG" alt="club1"></a>
               <p>Club</p>
             </div>
           </div>
@@ -52,7 +52,7 @@
           
           <div class="context-item">
             <br>
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <img src="~/assets/img/about/abroad2.jpeg" alt="contextStudyAbroad">
             <p class="context-text">2018年3ケ月間オーストラリアに現地の学校に通いながら留学した経験があります。様々な人種の方々と触れ合い、現地での学校生活、イベントなどを通して異国の地で過ごした経験は自信へと繋がり、人生経験としてとても良い思い出になりました。今でも現地で知り合った方達とSNSで繋がっていて、他国でサッカー、DJ、美容系、様々な方面で活躍している姿を見ているととても良いモチベーションに繋がります。</p>
           </div>
           <h2 class="titleGM">留学先のアデレード↓</h2>
@@ -78,20 +78,21 @@
           <p class="context-title" id="skill">Skills</p>
           <div class="context-item">
             <br>
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <img src="~/assets/img/about/skill2.jpg" alt="contextStudyAbroad">
             <p class="context-text">大学に入るまで、ほとんどプログラミングをしたことがなく、少しHTMLとCSS、JSを触ったくらいでした。大学に入り、色々な方と関わっていき、自分の身近な先輩や同級生が講義の傍、Web関係の事していて、その姿に憧れ次第にWebに興味を持ち始めました。<br><br><br>その後、<br><br> 2020年8月<br>株式会社デザイニウムで長期インターン開始<br><br>2021年1月<br>Floating Weedで長期インターン開始</p>
           </div>
           <p>↓↓↓</p>
           <el-button @click="visible = true">使える言語</el-button>
           
           <el-dialog
-            title="使える言語"
+            title="使える言語(期間/使用用途"
             :visible.sync="visible"
             width="30%"
-            center>
+            center
+            class="dialog-button">
             <div>
-              <p class="dialog-title">使える言語(期間/使用用途)</p>
-              <ul class="dialog-text">
+              
+              <ul class="dialog-card">
                 <li>Js(Vue)(半年/Web系会社のインターン,開発)</li>
                 <li>html, css(1年/Web系会社インターン,開発)</li>
                 <li>C言語(1年/講義)</li>
@@ -100,7 +101,7 @@
               </ul>
             </div>
             <span slot="footer" class="dialog-footer">
-              <el-button @click="visible = false">Cancel</el-button>
+              <el-button @click="visible = false" class="dialog-button">Cancel</el-button>
               <el-button @click="visible = false" class="dialog-button">Confirm</el-button>
             </span>
           </el-dialog>
@@ -108,7 +109,7 @@
         <div class="card">
           <p class="context-title" id="club">Club</p>
           <div class="context-item">
-            <img src="~/assets/img/about/skills.jpg" alt="contextStudyAbroad">
+            <img src="~/assets/img/about/club2.jpeg" alt="contextStudyAbroad">
             <p class="context-text">サークル活動では小規模ながら、アウトドアサークルというサークルの部長をしています。元々、部員の数が少なく自分が部長になった時は活動メンバーが5人いるかいないかの程度でした。せっかく、部長になったから何かサークルを成長させたいと思い、新たにSNS(Instagram)のアカウントの開設やその他SNSを活用し、新メンバー勧誘のために他大学の生徒の勧誘や積極的に部員に声をかけるなどをし前年度の3倍以上の部員を勧誘することができました。</p>
           </div>
         </div>
@@ -167,19 +168,46 @@ export default {
   margin: 0 1rem;
   color:#4D5156;
 }
+.dialog-card {
+  padding: 3rem;
+  color:rgb(191, 194, 223);
+  /* background-color:#FFF7AA; */
+  border: none;  /* 枠線を消す */
+    outline: none;
+    border-radius: 14px;
+    box-shadow: -2px -2px 5px rgb(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
+}
+.dialog-trigger {
+  color:rgb(191, 194, 223);
+  
+}
+.dialog-trigger:hover {
+  color:rgb(191, 194, 223);
+  background-color:#FFF7AA;
+ 
+}
 
 .dialog-title {
   text-align: center;
   font-size: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 .dialog-text {
-  padding: 1rem;
+
   text-align: left;
-  border: 2px #e6e4dd dashed;
 }
 .dialog-button {
-  color:#ffc778
+  color:rgb(191, 194, 223);
+  /* background-color:#FFF7AA; */
+  border: none;  /* 枠線を消す */
+    outline: none;
+    border-radius: 14px;
+  color: rgb(191, 194, 223);
+  box-shadow: -2px -2px 5px rgb(255, 255, 255), 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.dialog-button:active {
+  
+  box-shadow:  -2px -2px 5px rgba(0, 0, 0, 0.1)inset, 5px 5px 5px rgba(0, 0, 0, 0.1)inset;
 }
 .experience {
   border-radius: 10px;

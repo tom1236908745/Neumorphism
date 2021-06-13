@@ -2,10 +2,6 @@
   <div class="home">
     <section class="common-layout">
       <div class="card">
-        <span class="temp">// 製作中です。。。　色々アドバイスいただけると嬉しいです！(6/9)<br><br>
-        <br>
-          (まだ、レスポンシブ対応していません(ノートパソコン推奨(マスト)))
-        </span>
         <div class="home-title">
           <p>name: Tomoki Nakayama</p>
           <br />

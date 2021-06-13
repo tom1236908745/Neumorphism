@@ -46,6 +46,6 @@ export default {
 }
 .text {
   font-size: 1.5rem;
-  color: rgba(255, 233, 162, 0.822);
+  color: rgb(191, 194, 223);
 }
 </style>
