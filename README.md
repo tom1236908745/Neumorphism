@@ -1,5 +1,8 @@
 # nuxtproject
 
+URL 
+https://portfolio-f420d.web.app/
+
 ## Build Setup
 
 ```bash
